@@ -15,32 +15,8 @@ import warnings
 warnings.filterwarnings('ignore')
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-# AWS_ACCESS_KEY_ID = 'AKIAWWLQI54GVO47BBNB'
-# AWS_SECRET_ACCESS_KEY_ID = '2S4EA2cTE04NWJjF7ACl8P5M55T1XTHUmhDcqMFm'
-
 with warnings.catch_warnings(record=True):
     warnings.simplefilter("always")
-
-url = 'mysql+mysqlconnector://admin:Ppdts22$$!!@prismpod.cstncerthpii.us-east-1.rds.amazonaws.com:3306/prismpoddev'
-connection = sqlalchemy.create_engine(url)
-
-# # Connect to the database
-# connection = pymysql.connect(host='prismpod.cstncerthpii.us-east-1.rds.amazonaws.com',
-#                             user='admin',
-#                             password='Ppdts22$$!!',
-#                             database='prismpoddev',
-#                             cursorclass=pymysql.cursors.DictCursor)
-
-# Set up AWS credentials and connect to RDS
-client = boto3.client('rds', region_name="us-east-1",
-                    #   aws_access_key_id=AWS_ACCESS_KEY_ID,
-                    #   aws_secret_access_key=AWS_SECRET_ACCESS_KEY_ID
-                    )
-
-s3_client = boto3.client('s3', region_name="us-east-1",
-                        #  aws_access_key_id=AWS_ACCESS_KEY_ID,
-                        #  aws_secret_access_key=AWS_SECRET_ACCESS_KEY_ID
-                        )
 
 # Define SQL query to select data from the table
 sql_query = "SELECT * FROM candidate"
