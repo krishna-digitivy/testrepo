@@ -1,10 +1,6 @@
 import requests
 from datetime import datetime, timedelta
 
-# Jira credentials and base URL
-# auth = HTTPBasicAuth("kvkrishnareddy2406@gmail.com", "ATATT3xFfGF0LbtJFVNqbqkizHVmsQFAuFxZy4tq8606r7b-yX4G0AhsiN6nHYvv7ZMXSo2KXAgRwLgjD4nxWQyA3bUtfiJ4mq6Kz9bxnFII4bRjwe_18EcsV--g-n0-UGp8Ndats2A7TByhiBnT_WPyqGNB1FQnoTX5nvV0aTP8n449HvgIyFo=74518C3A")
-# headers = {"Accept": "application/json"}
-
 
 # Get the current date and the start of the week (Monday)
 current_date = datetime.now().date()
