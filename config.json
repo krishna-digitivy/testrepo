@@ -1,0 +1,7 @@
+{
+    "host": "prismpod.cstncerthpii.us-east-1.rds.amazonaws.com",
+    "database": "prismpoddev",
+    "user": "admin",
+    "password": "Ppdts22$$!!",
+    "port": 3306
+}
