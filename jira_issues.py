@@ -15,6 +15,8 @@ headers = {
 }
 
 # Function to retrieve Jira statistics per user
+
+
 def get_jira_stats():
     # Get all Jira issues matching the JQL query
     issues_url = f'{jira_url}/rest/api/2/search'
@@ -23,7 +25,8 @@ def get_jira_stats():
         'fields': 'status,issuetype,assignee,resolutiondate,created',
         'maxResults': 1000
     }
-    response = requests.get(issues_url, auth=(jira_user, jira_api_token), headers=headers, params=params)
+    response = requests.get(issues_url, auth=(
+        jira_user, jira_api_token), headers=headers, params=params)
     issues = response.json()['issues']
 
     # Dictionary to store user-wise statistics
@@ -33,16 +36,19 @@ def get_jira_stats():
     for issue in issues:
         assignee = issue['fields']['assignee']['displayName']
         status = issue['fields']['status']['name']
-        created_date = datetime.strptime(issue['fields']['created'], '%Y-%m-%dT%H:%M:%S.%f%z').date()
+        created_date = datetime.strptime(
+            issue['fields']['created'], '%Y-%m-%dT%H:%M:%S.%f%z').date()
         resolution_date = None
 
         # Check if the issue has been resolved
         if issue['fields'].get('resolutiondate'):
-            resolution_date = datetime.strptime(issue['fields']['resolutiondate'], '%Y-%m-%dT%H:%M:%S.%f%z').date()
+            resolution_date = datetime.strptime(
+                issue['fields']['resolutiondate'], '%Y-%m-%dT%H:%M:%S.%f%z').date()
 
         # Increment the appropriate statistics for the assignee
         if assignee not in user_stats:
-            user_stats[assignee] = {'completed': 0, 'open_defects': 0, 'resolved_this_week': 0}
+            user_stats[assignee] = {'completed': 0,
+                                    'open_defects': 0, 'resolved_this_week': 0}
 
         if status == 'Done' and resolution_date and created_date >= start_of_week:
             user_stats[assignee]['completed'] += 1
@@ -53,6 +59,7 @@ def get_jira_stats():
                 user_stats[assignee]['resolved_this_week'] += 1
 
     return user_stats
+
 
 # Get the Jira statistics
 stats = get_jira_stats()
