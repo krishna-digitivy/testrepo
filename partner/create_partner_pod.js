@@ -9,6 +9,16 @@ var ErrorResponse = {
     "data": ""
 };
 
+var ErrorResponse = {
+    "status": 500,
+    "data": ""
+};
+
+var ErrorResponse = {
+    "status": 504,
+    "data": ""
+};
+
 exports.handler = async(event) => {
 
     let id = Math.round(1302 * Math.random());
