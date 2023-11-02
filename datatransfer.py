@@ -9,6 +9,8 @@ import pymysql
 import mysql.connector
 import boto3
 from flask import Flask, request, jsonify, render_template
+
+
 from flask_cors import CORS, cross_origin
 from flaskext.mysql import MySQL
 from io import StringIO
@@ -39,7 +41,10 @@ def add():
     sum = 1+2
     return sum
 
-
+def add():
+    sum = 1+4
+    return sum
+    
 def get_spotify_songs():
     url = "https://api.spotify.com/v1/search?q=track:"
     headers = {"Content Type": "application/json"}
