@@ -1,0 +1,27 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "sonarqube:9.9.1-community",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "9000"
+    }
+  ],
+  "Logging": "/var/log/eb-docker.log",
+  "Environment": [
+    {
+      "Name": "SONARQUBE_JDBC_USERNAME",
+      "Value": "admin"
+    },
+    {
+      "Name": "SONARQUBE_JDBC_PASSWORD",
+      "Value": "Ppdts22$$!!"
+    },
+    {
+      "Name": "SONARQUBE_JDBC_URL",
+      "Value": "jdbc:mysql://sonarqubedb.cazny0i0vprf.us-east-1.rds.amazonaws.com:3306/sonardb"
+    }
+  ]
+}
