@@ -86,29 +86,13 @@ mysql = MySQL()
 
 ################################# Global Variable Declaration ########################################################
 outputData = {}
-AWS_ACCESS_KEY_ID = 'AKIAXTPFNQTGZIW5Y5ZF'
-AWS_SECRET_ACCESS_KEY_ID = 'jE8T8xvlol8cdFofL68V95ERC84TLb/NQS742IDI'
-AWS_REGION = 'us-east-1'
-REGION = 'us-east-1'
-default_bucket_name = "leadshaperdev"
-role = 'arn:aws:iam::522856531149:role/databrewrole'
-# sas_template = 'sas-delTemp-v2.0'
 
-app.config['MYSQL_DATABASE_USER'] = 'admin'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'Spdtsarc$$!!%%'
-app.config['MYSQL_DATABASE_DB'] = 'arcman'
-app.config['MYSQL_DATABASE_HOST'] = 'arcmandevdb.cluster-cyf4lq75o4mq.us-east-1.rds.amazonaws.com'
+
 # app.config['raise_on_warnings'] = True
 # app.config['use_pure'] = False
 mysql.init_app(app)
 # CORS(app)
 
-s3 = boto3.resource('s3', region_name="us-east-1",
-                    aws_access_key_id=AWS_ACCESS_KEY_ID,
-                    aws_secret_access_key=AWS_SECRET_ACCESS_KEY_ID)
-client = boto3.client("s3", region_name="us-east-1",
-                    aws_access_key_id=AWS_ACCESS_KEY_ID,
-                    aws_secret_access_key=AWS_SECRET_ACCESS_KEY_ID)
 
 # ###############################################################
 Quote = namedtuple("Quote", ("text", "author"))

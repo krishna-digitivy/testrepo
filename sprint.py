@@ -36,28 +36,6 @@ COLOR_DICT = {
 # In[3]:
 
 
-# url = "https://brilliaiglobalcorp.atlassian.net/rest/api/2/search"
-# url = "https://kundurukrishnareddy899.atlassian.net/rest/api/2/search"
-url = "https://globl.atlassian.net/rest/api/2/search"
-
-# old account
-# auth = HTTPBasicAuth("kvkrishnareddy2406@gmail.com", "ATATT3xFfGF0LbtJFVNqbqkizHVmsQFAuFxZy4tq8606r7b-yX4G0AhsiN6nHYvv7ZMXSo2KXAgRwLgjD4nxWQyA3bUtfiJ4mq6Kz9bxnFII4bRjwe_18EcsV--g-n0-UGp8Ndats2A7TByhiBnT_WPyqGNB1FQnoTX5nvV0aTP8n449HvgIyFo=74518C3A")
-# auth = HTTPBasicAuth("krishnareddykunduru123@gmail.com", "ATCTT3xFfGN0_m-tvRzwTlxi_GxfLFCpfSPDdoG3nqV-yOOmw8KDaQwO0rnMyFL9lww9F7THeXLzILGFBj3x27ktC9kXfgLVf-XvEhQcAZSfaOv-Tzk80dEXlnaHWMX-m7zPZQskvQerEEFbLigaw3JjodZmglCfqLqNlDt3sqXnGeYtfVdkZYc=32E1A93B")
-# new account
-# auth = HTTPBasicAuth("kundurukrishnareddy899@gmail.com", "ATATT3xFfGF0QYLA-yxhQCeMVpKMiwlgHXORwvHGSRYlP0JiwNysEysMPuN0pGgLIqw5xehcBU3ScVIIW-pwNw8aE0KunMn3tZcwCfP-Dxet98TPFufb2LkM3QuzwEAFLsEYDsDaOjTIjKHDoPENEQkUOSb7VVFF9Nzlimh6Z2FfGQR_aUtzqCg=DA8194FB")
-# auth = HTTPBasicAuth("kundurukrishnareddy899@gmail.com", "ATCTT3xFfGN0SuSTnTIt4sHAa6PQR6rTBE-PReHz48W1OltFPc6fxcn8EAXHeVAfxb5DdH9MD2X7klACsD0b5rvfwXxvexlzNQMpF_4xr_uE173GepJGvGaOpzPfIACK1rXdZsjcTNbxbdPOciJ0WB4g4yMpSxCiBWjqZnJ2iXk1oUqcNXHqbhI=7E307ACF")
-# Org ID : 728k03db-8a75-1j7k-j60j-9ba807ccca50
-# Globl Jira Account
-auth = HTTPBasicAuth("contact@brilliglobal.com", "ATATT3xFfGF0pcT-Pv-Vxv655dnxB24ssLtzGWf7PY_jWg1VhrQNoFn5fkOY8asxa86asu1cgq2QYdhHHAF3yC6hNwIGVHTdYLM2UxqXh3b3FIOGztXqWLycp98mQK8QFCp24-zTGbxkR7tsopGtUwlUqPP4qcaeQi3me09bkWqqjw3e4llCPzs=3FD36C8D")
-
-headers = {"Accept": "application/json"}
-
-# ATATT3xFfGF0QYLA-yxhQCeMVpKMiwlgHXORwvHGSRYlP0JiwNysEysMPuN0pGgLIqw5xehcBU3ScVIIW-pwNw8aE0KunMn3tZcwCfP-Dxet98TPFufb2LkM3QuzwEAFLsEYDsDaOjTIjKHDoPENEQkUOSb7VVFF9Nzlimh6Z2FfGQR_aUtzqCg=DA8194FB
-
-# query = {'jql': 'project = brilliglobalai'}
-# query = {'jql': 'project = GLB'}
-query = {'jql': 'project = GLOB'}
-# query = {'jql': 'project = globldev'}
 
 
 # In[4]:
@@ -302,9 +280,6 @@ print("Cell value at ", index, "for column ", col, " : ", project_name)
 
 
 # import requests
-# auth = HTTPBasicAuth("kvkrishnareddy2406@gmail.com", "ATATT3xFfGF0LbtJFVNqbqkizHVmsQFAuFxZy4tq8606r7b-yX4G0AhsiN6nHYvv7ZMXSo2KXAgRwLgjD4nxWQyA3bUtfiJ4mq6Kz9bxnFII4bRjwe_18EcsV--g-n0-UGp8Ndats2A7TByhiBnT_WPyqGNB1FQnoTX5nvV0aTP8n449HvgIyFo=74518C3A")
-# jiraResponse     = requests.get('https://brilliaiglobalcorp.atlassian.net/rest/agile/1.0/board/3/sprint', auth=auth)
-# jiraResponseJSON = jiraResponse.json()
 
 
 # ### Visualising Sprint Progress - Sprint Velocity
