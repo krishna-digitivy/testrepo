@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "description": "Inert Guard acceptance fixture; do not install or deploy",
+  "dependencies": {
+    "express": "*",
+    "axios": "*",
+    "lodash": "*",
+    "moment": "*",
+    "uuid": "*",
+    "dotenv": "*",
+    "chalk": "*",
+    "commander": "*",
+    "cors": "*",
+    "body-parser": "*",
+    "debug": "*",
+    "semver": "*"
+  }
+}
